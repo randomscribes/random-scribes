@@ -1,0 +1,6 @@
+baseurl = "http://replace-this-with-your-hugo-site.com/"
+title = "Steven's Random Scribes"
+languageCode = "en-us"
+
+[Params]
+	Author = "Steven Hancock"

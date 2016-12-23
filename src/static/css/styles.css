@@ -1,0 +1,254 @@
+/* Colors based off of https://material.io/guidelines/style/color.html#color-color-palette */
+
+a {
+  color: #f44336;
+}
+.randomscribes-header {
+  position: relative;
+  background-color: #fff;
+}
+
+.randomscribes-header .mdl-layout__header-row {
+  padding: 0;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mdl-layout__title {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 300;
+}
+
+.mdl-card__media {
+  background-color: #C62828;
+}
+
+.is-compact .mdl-layout__title span {
+  display: none;
+}
+
+.randomscribes-logo-row {
+  min-height: 200px;
+}
+
+.is-compact .randomscribes-logo-row {
+  min-height: auto;
+}
+
+.randomscribes-logo {
+  background: url(/images/steven-hancock.png) 50% no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  margin: auto auto 10px;
+}
+
+.is-compact .randomscribes-logo {
+  height: 50px;
+  width: 50px;
+  margin-top: 7px;
+}
+
+.randomscribes-navigation-row {
+  background-color: #C62828;
+  text-transform: uppercase;
+  height: 45px;
+  color: #fff;
+}
+
+.randomscribes-navigation-row  .mdl-navigation {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.randomscribes-navigation-row .mdl-navigation__link {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 42px;
+}
+
+.randomscribes-header .mdl-layout__drawer-button {
+    background-color: #ffcdd2;
+}
+
+.mdl-layout__drawer .drawer-title {
+    font-size: 12pt;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.randomscribes-navigation-row .is-active {
+  position: relative;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.randomscribes-navigation-row .mdl-navigation__link {
+  color: #fff;
+}
+
+.randomscribes-navigation-row .is-active:after {
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #ffcdd2;
+  left: 15%;
+}
+
+.randomscribes-card .mdl-card__title {
+  padding-bottom: 0;
+}
+
+.randomscribes-blog-card-full-bg {
+  background: url(images/example-blog03.jpg) center / cover;
+}
+
+.randomscribes-blog-card-event-bg {
+  background: url(images/example-blog05.jpg) center / cover;
+}
+
+.randomscribes-blog-card-strip-bg {
+  background: url(images/example-blog06.jpg) center / cover;
+}
+
+.randomscribes-blog-card-compact .mdl-card__title {
+  padding-bottom: 0;
+}
+
+.randomscribes-blog-card-bg > .mdl-card__actions {
+  height: 52px;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.mdl-cell .mdl-button--accent.mdl-button--accent {
+  color: #b71c1c;
+}
+
+img.article-image {
+  width: 100%;
+  height: auto;
+}
+
+.randomscribes-max-width {
+  max-width: 900px;
+  margin: auto;
+  min-height: 100vh;
+}
+
+.randomscribes-copy {
+  max-width: 700px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.no-left-padding{
+  padding-left: 0;
+}
+
+.no-bottom-padding {
+  padding-bottom: 0;
+}
+
+.padding-top {
+  padding: 10px 0 0;
+}
+
+.randomscribes-share-btn {
+  position: relative;
+  float: right;
+  top: -4px;
+}
+
+.demo-card-event > .mdl-card__actions {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    box-sizing: border-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.randomscribes-contact .mdl-textfield {
+  width: 100%;
+}
+
+.randomscribes-contact form {
+  max-width: 550px;
+  margin: auto;
+}
+
+.padding-8 {
+  margin: 0;
+  padding: 8px;
+}
+
+.randomscribes-post-image-background{
+  background-position: center top;
+  background-size: cover;
+  background-color: #fff;
+  height: 65vh;
+  min-height: 200px;
+  position: relative;
+}
+
+.randomscribes-post-image-background aside{
+  position: absolute; 
+  bottom: 0;
+}
+
+.randomscribes-post-list .randomscribes-post-image-background{
+  height: 100%;
+  min-height: 150px;
+  width: auto;
+}
+
+.randomscribes-post-list h2 a{
+  text-decoration: none;
+}
+
+.randomscribes-contact-list {
+  font-size: 24pt;
+  list-style: none;  
+  padding-left: 50px;
+}
+
+.randomscribes-contact-list li{
+  margin-bottom: 50px;
+  padding-left: 50px;
+  text-indent: -50px;
+}
+
+.randomscribes-margin-auto {
+  margin: auto;
+}
+
+.randomscribes-contact-list a {
+  text-decoration: none;
+}
+
+.mdl-card__media h1, .mdl-card__media h2, .mdl-card__media h3, .mdl-card__media h4, .mdl-card__media h5{
+  color: #fff;
+  margin: 0;
+  text-shadow: 1px 1px 2px #424242;
+}
+
+footer.mdl-mini-footer {
+  background-color: #f44336;
+}
+
+footer.mdl-mini-footer {
+  color: #E0E0E0;
+}
+

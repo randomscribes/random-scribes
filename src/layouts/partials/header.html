@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Random scibes of programmer? data scientist? business analyst? manager?">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall randomscribes-header">
+            <div class="mdl-layout__header-row randomscribes-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="randomscribes-logo"></div>
+                    <span class="mdl-layout__title">{{ .Site.Title }}</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row randomscribes-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link {{ if or (eq .Section "") (eq .Section "post") }}is-active{{ end }}" href="/post">Posts</a>
+                    <a class="mdl-navigation__link {{ if eq .Section "about" }}is-active{{ end }}" href="/about">About</a>
+                    <a class="mdl-navigation__link {{ if eq .Section "contact" }}is-active{{ end }}" href="/contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <h2 class='drawer-title'>{{ .Site.Title }}</h2>
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link {{ if or (eq .Section "") (eq .Section "post") }}is-active{{ end }}" href="/post">Posts</a>
+                <a class="mdl-navigation__link {{ if eq .Section "about" }}is-active{{ end }}" href="/about">About</a>
+                <a class="mdl-navigation__link {{ if eq .Section "contact" }}is-active{{ end }}" href="/contact">Contact</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid randomscribes-max-width"> 
