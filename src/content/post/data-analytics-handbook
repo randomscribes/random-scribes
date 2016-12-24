@@ -1,0 +1,14 @@
++++
+image = "unknown.png"
+date = "2016-12-23T21:39:22-06:00"
+title ="The Data Analytics Handbook"
+draft = true
+
++++
+- Multiparty series
+- Interviews with various analytics academics and professionals (Yelp, Google, etc)
+- Questions such as
+-- What's the difference between *data scientist* and *data analyst*?
+-- what do you look for when hiring?
+-- how do you see the industry evolving?
+-- what are the important skills for young analytic professionals to learn?
