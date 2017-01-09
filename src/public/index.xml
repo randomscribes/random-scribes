@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Steven&#39;s Random Scribes</title>
+    <link>http://www.randomscribes.com/index.xml</link>
+    <description>Recent content on Steven&#39;s Random Scribes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 12 Dec 2016 21:28:57 -0600</lastBuildDate>
+    <atom:link href="http://www.randomscribes.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>About the Blog &amp; the Writer</title>
+      <link>http://www.randomscribes.com/about/</link>
+      <pubDate>Mon, 12 Dec 2016 21:28:57 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/about/</guid>
+      <description>&lt;p&gt;Hey! I&amp;rsquo;m Steven. That&amp;rsquo;s me over there with my beautiful wife and young son. I started this blog to start sharing my experiences. I am a big believer in reflecting on thoughts &amp;amp; ideas. This blog is a way to force myself to do so. Hopefully along the way I inspire thought in a few others and the world get&amp;rsquo;s a just a microfraction of a percent (?) better.&lt;/p&gt;
+
+&lt;p&gt;A little bit about myself. I grew up in a small town in Saskatchewan, Canada and am now living in Saskatoon, Saskatchewan. I&amp;rsquo;ve been programming since 2004, doing analytics since 2010, and data analysis since 2012. I&amp;rsquo;m currently employed by one of the best employers in Saskatoon, &lt;a href=&#34;https://www.vendasta.com&#34;&gt;Vendasta&lt;/a&gt; as the Director of Business Intelligence. I have a degree in Computer Science and a degree in Commerce. I love studying, reading, and listening to podcast about anything related to data analysis and statistics, programming, managing and organization theory.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About the Blog &amp; the Writer</title>
+      <link>http://www.randomscribes.com/</link>
+      <pubDate>Mon, 12 Dec 2016 21:28:57 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/</guid>
+      <description>&lt;p&gt;Hey! I&amp;rsquo;m Steven. That&amp;rsquo;s me over there with my beautiful wife and young son. I started this blog to start sharing my experiences. I am a big believer in reflecting on thoughts &amp;amp; ideas, and this blog is a way to force myself to do so. Hopefully along the way I inspire thought in a few others and the world get&amp;rsquo;s a just a microfraction of a percent (?) better.&lt;/p&gt;
+
+&lt;p&gt;A little bit about myself. I grew up in a small town in Saskatchewan, Canada and I am now living in Saskatoon, Saskatchewan. I&amp;rsquo;ve been programming since 2004, doing analytics since 2010, and data analysis since 2012. I&amp;rsquo;m currently employed by one of the best employers in Saskatoon, &lt;a href=&#34;https://www.vendasta.com&#34;&gt;Vendasta&lt;/a&gt; as the Director of Business Intelligence. I have a degree in Computer Science and a degree in Commerce. I love studying, reading, and listening to podcasts about anything related to data analysis and statistics, programming, managing and organization theory.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Contact - Steven&#39;s Random Scribes</title>
+      <link>http://www.randomscribes.com/contact/</link>
+      <pubDate>Sun, 11 Dec 2016 20:01:50 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Blog Restart</title>
+      <link>http://www.randomscribes.com/post/blog-restart/</link>
+      <pubDate>Thu, 01 Dec 2016 20:01:50 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/post/blog-restart/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m restarting my blog! It&amp;rsquo;s been a long time since I&amp;rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&amp;rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m resetting. New look, new platform (Hugo), and new thoughts. I&amp;rsquo;m going to be writing more often about more topics. Some of the blog posts are going to be shorter, like this one. I&amp;rsquo;m going to be blogging about new topics like managing, data science &amp;amp; analysis, in addition to programming and any other thoughts that I have.&lt;/p&gt;
+
+&lt;p&gt;I hope you enjoy.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

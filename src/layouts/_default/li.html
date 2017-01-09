@@ -7,10 +7,6 @@
         <h2 class="mdl-card__title-text"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         <div class="mdl-card__supporting-text padding-top">
             <span>{{ .Date.Format "Mon, Jan 2, 2006" }} {{ if .GetParam "draft"}}DRAFT{{end}}</span>
-            <div id="tt1" class=" icon material-icons randomscribes-share-btn">share</div>
-            <div class="mdl-tooltip" for="tt1">
-                Share via social media
-            </div>
         </div>
         <div class="mdl-card__supporting-text no-left-padding">
             <p>{{ .Summary }} <a href="{{ .Permalink }}">Read full post &#10132;</a></p>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post-rsses on Steven&#39;s Random Scribes</title>
+    <link>http://www.randomscribes.com/post/index.xml</link>
+    <description>Recent content in Post-rsses on Steven&#39;s Random Scribes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Dec 2016 20:01:50 -0600</lastBuildDate>
+    <atom:link href="http://www.randomscribes.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Blog Restart</title>
+      <link>http://www.randomscribes.com/post/blog-restart/</link>
+      <pubDate>Thu, 01 Dec 2016 20:01:50 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/post/blog-restart/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m restarting my blog! It&amp;rsquo;s been a long time since I&amp;rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&amp;rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m resetting. New look, new platform (Hugo), and new thoughts. I&amp;rsquo;m going to be writing more often about more topics. Some of the blog posts are going to be shorter, like this one. I&amp;rsquo;m going to be blogging about new topics like managing, data science &amp;amp; analysis, in addition to programming and any other thoughts that I have.&lt;/p&gt;
+
+&lt;p&gt;I hope you enjoy.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,6 +5,7 @@ title ="The Data Analytics Handbook"
 draft = true
 
 +++
+
 - A four part series focusing on analytics. CEOs and Managers, Big Data, Data Analyst & Data Science, Researchers & Analytics,
 - Interviews with various analytics academics and professionals (Yelp, Google, LinkedIn,  etc)
 - Questions such as
