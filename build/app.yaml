@@ -11,7 +11,7 @@ handlers:
     static_files: static/css/\1
     upload: static/(.*)
 
-  - url: /(.+)
+  - url: /(.*)/?$
     static_files: static/\1/index.html
     upload: static/(.*)/index.html
 
