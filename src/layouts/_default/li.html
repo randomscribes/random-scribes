@@ -1,0 +1,16 @@
+<div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
+    	<div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
+    		<div class="randomscribes-post-image-background" style="background-image: url(/images/{{ .Params.image }})"></div>
+    	</div>
+
+    <div class="mdl-cell mdl-cell--8-col">
+        <h2 class="mdl-card__title-text"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div class="mdl-card__supporting-text padding-top">
+            <span>{{ .Date.Format "Mon, Jan 2, 2006" }} {{ if .GetParam "draft"}}DRAFT{{end}}</span>
+        </div>
+        <div class="mdl-card__supporting-text no-left-padding">
+            <p>{{ .Summary }} <a href="{{ .Permalink }}">Read full post &#10132;</a></p>
+            <span>Category: <a href="#">Latest</a></span>
+        </div>
+    </div>
+</div>

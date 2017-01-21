@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Steven&#39;s Random Scribes</title>
+    <link>http://www.randomscribes.com/index.xml</link>
+    <description>Recent content on Steven&#39;s Random Scribes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 Dec 2016 21:37:31 -0600</lastBuildDate>
+    <atom:link href="http://www.randomscribes.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hugo Blog Tutorial</title>
+      <link>http://www.randomscribes.com/post/hugo-blog-tutorial/</link>
+      <pubDate>Sat, 31 Dec 2016 21:37:31 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/post/hugo-blog-tutorial/</guid>
+      <description>&lt;p&gt;So I&amp;rsquo;ve started this new blog. Something a little easier to update than my &lt;a href=&#34;http://old.randomscribes.com&#34;&gt;old blog&lt;/a&gt;. I&amp;rsquo;m using a number of great technologies, Git (of course), Hugo, and Google&amp;rsquo;s Appengine. This post is all about my experience with Hugo.&lt;/p&gt;
+
+&lt;h1 id=&#34;why-hugo&#34;&gt;Why Hugo?&lt;/h1&gt;
+
+&lt;p&gt;Hugo is a static site generator. It&amp;rsquo;s built on top of Go, very simple, and super fast. You write your content in markdown and after saving the Hugo server will automatically build your static files on the fly for easy testing on your local host. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you&amp;rsquo;ll be fine. You can use one of the existing &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;themes&lt;/a&gt;, build your own, or if you are like me go without one (although I think they recommend always using a theme).&lt;/p&gt;
+
+&lt;h1 id=&#34;how-d-i-do-it&#34;&gt;How&amp;rsquo;d I do it?&lt;/h1&gt;
+
+&lt;p&gt;There is a &lt;a href=&#34;http://gohugo.io/overview/quickstart/&#34;&gt;quick start guide&lt;/a&gt; that I used from Hugo, my instructions diverge a little bit from it.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Install from &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; or&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ brew update &amp;amp;&amp;amp; brew install hugo 
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Create your new site.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new site random-scribes
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You&amp;rsquo;ll have a folder structure that looks something like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- archetypes
+|-- config.toml
+|-- content
+|-- data
+|-- layouts
+`-- static
+
+5 directories, 1 file
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Straight from the Hugo &lt;a href=&#34;http://gohugo.io/overview/quickstart/&#34;&gt;quick start guide&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;archetypes: You can create new content files in Hugo using the hugo new command. When you run that command, it adds few configuration properties to the post like date and title. Archetype allows you to define your own configuration properties that will be added to the post front matter whenever hugo new command is used.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;config.toml: Every website should have a configuration file at the root. By default, the configuration file uses TOML format but you can also use YAML or JSON formats as well. TOML is minimal configuration file format that’s easy to read due to obvious semantics. The configuration settings mentioned in the config.toml are applied to the full site. These configuration settings include baseURL and title of the website.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;content: This is where you will store content of the website. Inside content, you will create sub-directories for different sections. Let’s suppose your website has three actions – blog, article, and tutorial then you will have three different directories for each of them inside the content directory. The name of the section i.e. blog, article, or tutorial will be used by Hugo to apply a specific layout applicable to that section.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;data: This directory is used to store configuration files that can be used by Hugo when generating your website. You can write these files in YAML, JSON, or TOML format.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;layouts: The content inside this directory is used to specify how your content will be converted into the static website.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;static: This directory is used to store all the static content that your website will need like images, CSS, JavaScript or other static content.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now add some content&amp;hellip; in my case I wanted to add a new post.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo new post/hugo-blog-tutorial.md
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You&amp;rsquo;ll see this file show up as &lt;code&gt;content/post/hugo-blog-tutorial.md&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Inside my brand new file, I find this lovely TOML configuration:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+++
+date = &amp;quot;2016-12-19T21:37:31-06:00&amp;quot;
+draft = true
+title = &amp;quot;hugo blog tutorial&amp;quot;
+
++++
+
+I added this as my first blog post&#39;s content.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown. Make sure you follow the proper syntax for true and false. I had a hard time figuring out what was wrong when I accidentally use the Pythonic &lt;em&gt;True&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;You can download a &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;theme&lt;/a&gt; and throw it into a directory called &lt;code&gt;themes&lt;/code&gt;. I tried that and got confused once I started customizing, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ hugo server --theme=hugo_theme_robust --buildDrafts
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;If you&amp;rsquo;re still with me and decided against the theme, thanks for taking my advice! Setting up your site is pretty straight forward, everything goes in you &lt;code&gt;layouts&lt;/code&gt; directory.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;First you&amp;rsquo;ll probably want to set up your &lt;code&gt;partials&lt;/code&gt; folder. I added a &lt;code&gt;header.html&lt;/code&gt; and &lt;code&gt;footer.html&lt;/code&gt;. You can guess the kind of content that would be included there.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Second, in your &lt;code&gt;layouts&lt;/code&gt; create an &lt;code&gt;index.html&lt;/code&gt;, this can contain whatever you want, but you&amp;rsquo;ll probably want to include both your partials.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ partial &amp;quot;header.html&amp;quot; . }}
+&amp;lt;main&amp;gt;
+    &amp;lt;!-- some sort of content here --&amp;gt;
+&amp;lt;/main&amp;gt;
+{{ partial &amp;quot;footer.html&amp;quot; . }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now you&amp;rsquo;ll want to set up your &lt;code&gt;_default&lt;/code&gt; folder.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Let&amp;rsquo;s start with &lt;code&gt;section.html&lt;/code&gt; do something simple like:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;    {{ partial &amp;quot;header.html&amp;quot; . }}
+    &amp;lt;main&amp;gt;
+        &amp;lt;div&amp;gt;
+            {{ range .Data.Pages }}
+                {{ .Render &amp;quot;li&amp;quot;}}
+            {{ end }}
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/main&amp;gt;
+    {{ partial &amp;quot;footer.html&amp;quot; . }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;This will generate a page with a whole bunch of &lt;em&gt;li&lt;/em&gt;. Those &lt;em&gt;li&lt;/em&gt; are your posts (or any other content that you&amp;rsquo;ve added to you &lt;code&gt;content&lt;/code&gt; folder). In &lt;code&gt;_default&lt;/code&gt; you&amp;rsquo;ll want to add a &lt;code&gt;li.html&lt;/code&gt; file.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt;
+    &amp;lt;div&amp;gt;
+        &amp;lt;h2&amp;gt;&amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt;{{ .Title }}&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;span&amp;gt;{{ .Date.Format &amp;quot;Mon, Jan 2, 2006&amp;quot; }} {{ if .GetParam &amp;quot;draft&amp;quot;}}DRAFT{{end}}&amp;lt;/span&amp;gt;
+        &amp;lt;/div&amp;gt;
+        &amp;lt;div&amp;gt;
+            &amp;lt;p&amp;gt;{{ .Summary }} &amp;lt;a href=&amp;quot;{{ .Permalink }}&amp;quot;&amp;gt;Read full post &amp;amp;#10132;&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+        &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The &lt;code&gt;.Title&lt;/code&gt; and &lt;code&gt;.Date&lt;/code&gt; are from the &lt;em&gt;post&lt;/em&gt; markdown files. The &lt;code&gt;.Permalink&lt;/code&gt; is the link to the post. Then we are checking to see if this post is a draft so we can spit that out as a visual indicator. The &lt;code&gt;.Summary&lt;/code&gt; is &amp;ldquo;A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting &lt;!--more--&gt; at the appropriate place in the content page&amp;rdquo;. I find it useful being able to control the breakpoint!&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Finally you have &lt;code&gt;single.html&lt;/code&gt;. This is how your post is going to be setup. For simplicity let&amp;rsquo;s just have:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;{{ partial &amp;quot;header.html&amp;quot; . }}
+&amp;lt;section&amp;gt;
+    &amp;lt;h1 id=&amp;quot;title&amp;quot;&amp;gt;{{ .Title }}&amp;lt;/h1&amp;gt;
+    &amp;lt;aside id=&amp;quot;meta&amp;quot;&amp;gt;
+        &amp;lt;h4 id=&amp;quot;date&amp;quot;&amp;gt; {{ .Date.Format &amp;quot;Mon Jan 2, 2006&amp;quot; }} &amp;lt;/h4&amp;gt;
+        &amp;lt;section&amp;gt;
+            &amp;lt;h5 id=&amp;quot;wc&amp;quot;&amp;gt; 
+                {{ if gt (div .WordCount 250.0) 1 }}
+                    {{ int (div .WordCount 250.0) }} Minutes
+                {{else}}
+                    1 Minute
+                {{ end }}
+                of reading time
+            &amp;lt;/h5&amp;gt;
+        &amp;lt;/section&amp;gt;
+    &amp;lt;/aside&amp;gt;
+    &amp;lt;div class=&amp;quot;padding-8&amp;quot;&amp;gt;
+        &amp;lt;article id=&amp;quot;content&amp;quot;&amp;gt;
+        {{ .Content }}
+        &amp;lt;/article&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/section&amp;gt;
+{{ partial &amp;quot;footer.html&amp;quot; . }}            
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Most of this you&amp;rsquo;ve seen before except for a couple new variables. &lt;code&gt;.WordCount&lt;/code&gt; as you may have guessed, is the number of words in your post. Likewise &lt;code&gt;.Content&lt;/code&gt; is the content of the actually post.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Now you are ready to start the Hugo server, with the &lt;code&gt;--buildDraft&lt;/code&gt; option (or else you won&amp;rsquo;t have any content).&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;$ hugo server --buildDrafts&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;You&amp;rsquo;ll get some lovely output telling you what was create, the server address (&lt;a href=&#34;http://localhost:1313/&#34;&gt;http://localhost:1313/&lt;/a&gt;) and that Hugo is watching for any changes.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Check it out in your browser. Make some changes and see how fast Hugo rebuilds your site. When you&amp;rsquo;re ready (and update some of your posts so that they are no longer in draft) just run &lt;code&gt;$ hugo&lt;/code&gt; and Hugo will throw your built website in the &lt;code&gt;public&lt;/code&gt; folder.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;done&#34;&gt;Done&lt;/h1&gt;
+
+&lt;p&gt;Well the Hugo part is done. You can checkout &lt;a href=&#34;https://github.com/randomscribes/random-scribes&#34;&gt;GitHub&lt;/a&gt; to see how I&amp;rsquo;ve evolved the blog over time. I&amp;rsquo;ve still got to setup up my Appengine instance and deploy the code and switch my old blog to a subdomain of my new one. That&amp;rsquo;ll come in another post.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Blog Restart</title>
+      <link>http://www.randomscribes.com/post/blog-restart/</link>
+      <pubDate>Fri, 30 Dec 2016 20:01:50 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/post/blog-restart/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m restarting my blog! It&amp;rsquo;s been a long time since I&amp;rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&amp;rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m resetting. New look, new platform (Hugo), and new thoughts. I&amp;rsquo;m going to be writing more often about more topics. Some of the blog posts are going to be shorter, like this one. I&amp;rsquo;m going to be blogging about new topics like managing, data science &amp;amp; analysis, in addition to programming and any other thoughts that I have.&lt;/p&gt;
+
+&lt;p&gt;I hope you enjoy.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Contact - Steven&#39;s Random Scribes</title>
+      <link>http://www.randomscribes.com/contact/</link>
+      <pubDate>Thu, 01 Dec 2016 20:01:50 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About the Blog &amp; the Writer</title>
+      <link>http://www.randomscribes.com/about/</link>
+      <pubDate>Thu, 01 Dec 2016 12:28:57 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/about/</guid>
+      <description>&lt;p&gt;Hey! I&amp;rsquo;m Steven. That&amp;rsquo;s me over there with my beautiful wife and young son. I started this blog to start sharing my experiences. I am a big believer in reflecting on thoughts &amp;amp; ideas. This blog is a way to force myself to do so. Hopefully along the way I inspire thought in a few others and the world get&amp;rsquo;s a just a microfraction of a percent (?) better.&lt;/p&gt;
+
+&lt;p&gt;A little bit about myself. I grew up in a small town in Saskatchewan, Canada and am now living in Saskatoon, Saskatchewan. I&amp;rsquo;ve been programming since 2004, doing analytics since 2010, and data analysis since 2012. I&amp;rsquo;m currently employed by one of the best employers in Saskatoon, &lt;a href=&#34;https://www.vendasta.com&#34;&gt;Vendasta&lt;/a&gt; as the Director of Business Intelligence. I have a degree in Computer Science and a degree in Commerce. I love studying, reading, and listening to podcast about anything related to data analysis and statistics, programming, managing and organization theory.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

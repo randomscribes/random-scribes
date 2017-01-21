@@ -1,0 +1,8 @@
+baseurl = "http://www.randomscribes.com/"
+title = "Steven's Random Scribes"
+languageCode = "en-us"
+googleAnalytics = "UA-40436937-1"
+
+
+[Params]
+	Author = "Steven Hancock"

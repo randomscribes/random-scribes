@@ -1,0 +1,44 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<section id="post" class="mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+	<div>
+		<div class="mdl-card__media randomscribes-post-image-background padding-8" style="background-image: url(/images/{{ .Params.image }})">
+			<h1 id="title">{{ .Title }}</h1>
+            <aside id="meta">
+			    <div>
+				<h4 id="date"> {{ .Date.Format "Mon Jan 2, 2006" }} </h4>
+			    <section>
+					<h5 id="wc"> 
+						{{ if gt (div .WordCount 250.0) 1 }}
+						    {{ int (div .WordCount 250.0) }} Minutes
+						{{else}}
+						    1 Minute
+						{{ end }}
+						 of reading time
+					</h5>
+			    </section>
+			    <ul id="categories">
+			      {{ range .Params.topics }}
+			        <li><a href="{{ $baseurl }}/topics/{{ . | urlize }}">{{ . }}</a> </li>
+			      {{ end }}
+			    </ul>
+			    <ul id="tags">
+			      {{ range .Params.tags }}
+			        <li> <a href="{{ $baseurl }}/tags/{{ . | urlize }}">{{ . }}</a> </li>
+			      {{ end }}
+			    </ul>
+			    </div>
+			</aside>
+        </div>
+		
+		<div class="padding-8">
+	        <article id="content">
+	           {{ .Content }}
+	        </article>
+		</div>
+	</div>
+</section>
+
+
+{{ partial "footer.html" . }}

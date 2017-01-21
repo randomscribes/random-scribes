@@ -1,0 +1,19 @@
+{{ partial "header.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+
+<section id="about" class="mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+    <h1 id="title" class="padding-8">{{ .Title }}</h1>
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--8-col mdl-cell--5-col-tablet mdl-cell--12-col-phone">
+            <article id="content">
+               {{ .Content }}
+            </article>
+        </div>
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--3-col-tablet mdl-cell--12-col-phone">
+            <img class="article-image" src="/images/steven-hancock-family.jpg" border="0" alt="">
+        </div>
+    </div>
+</section>
+
+
+{{ partial "footer.html" . }}

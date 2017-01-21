@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Random scibes of programmer? data scientist? business analyst? manager?">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Steven&#39;s Random Scribes</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.grey-pink.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--waterfall randomscribes-header">
+            <div class="mdl-layout__header-row randomscribes-logo-row">
+                <span class="mdl-layout__title">
+                    <div class="randomscribes-logo"></div>
+                    <span class="mdl-layout__title">Steven&#39;s Random Scribes</span>
+                </span>
+            </div>
+            <div class="mdl-layout__header-row randomscribes-navigation-row mdl-layout--large-screen-only">
+                <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                    <a class="mdl-navigation__link is-active" href="/post">Posts</a>
+                    <a class="mdl-navigation__link " href="/about">About</a>
+                    <a class="mdl-navigation__link " href="/contact">Contact</a>
+                </nav>
+            </div>
+        </header>
+        <div class="mdl-layout__drawer mdl-layout--small-screen-only">
+            <h2 class='drawer-title'>Steven&#39;s Random Scribes</h2>
+            <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+                <a class="mdl-navigation__link is-active" href="/post">Posts</a>
+                <a class="mdl-navigation__link " href="/about">About</a>
+                <a class="mdl-navigation__link " href="/contact">Contact</a>
+            </nav>
+        </div>
+        <main class="mdl-layout__content">
+            <div class="mdl-grid randomscribes-max-width"> 
+
+
+
+<section id="post" class="mdl-cell mdl-cell--12-col mdl-shadow--4dp">
+	<div>
+		<div class="mdl-card__media randomscribes-post-image-background padding-8" style="background-image: url(/images/hugo.png)">
+			<h1 id="title">Hugo Blog Tutorial</h1>
+            <aside id="meta">
+			    <div>
+				<h4 id="date"> Sat Dec 31, 2016 </h4>
+			    <section>
+					<h5 id="wc"> 
+						
+						    5 Minutes
+						
+						 of reading time
+					</h5>
+			    </section>
+			    <ul id="categories">
+			      
+			    </ul>
+			    <ul id="tags">
+			      
+			    </ul>
+			    </div>
+			</aside>
+        </div>
+		
+		<div class="padding-8">
+	        <article id="content">
+	           <p>So I&rsquo;ve started this new blog. Something a little easier to update than my <a href="http://old.randomscribes.com">old blog</a>. I&rsquo;m using a number of great technologies, Git (of course), Hugo, and Google&rsquo;s Appengine. This post is all about my experience with Hugo.</p>
+
+<h1 id="why-hugo">Why Hugo?</h1>
+
+<p>Hugo is a static site generator. It&rsquo;s built on top of Go, very simple, and super fast. You write your content in markdown and after saving the Hugo server will automatically build your static files on the fly for easy testing on your local host. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you&rsquo;ll be fine. You can use one of the existing <a href="http://themes.gohugo.io/">themes</a>, build your own, or if you are like me go without one (although I think they recommend always using a theme).</p>
+
+<h1 id="how-d-i-do-it">How&rsquo;d I do it?</h1>
+
+<p>There is a <a href="http://gohugo.io/overview/quickstart/">quick start guide</a> that I used from Hugo, my instructions diverge a little bit from it.</p>
+
+<ol>
+<li><p>Install from <a href="http://gohugo.io/">Hugo</a> or</p>
+
+<pre><code>$ brew update &amp;&amp; brew install hugo 
+</code></pre></li>
+
+<li><p>Create your new site.</p>
+
+<pre><code>$ hugo new site random-scribes
+</code></pre></li>
+
+<li><p>You&rsquo;ll have a folder structure that looks something like this:</p>
+
+<pre><code>.
+|-- archetypes
+|-- config.toml
+|-- content
+|-- data
+|-- layouts
+`-- static
+
+5 directories, 1 file
+</code></pre>
+
+<p>Straight from the Hugo <a href="http://gohugo.io/overview/quickstart/">quick start guide</a></p>
+
+<ul>
+<li><p>archetypes: You can create new content files in Hugo using the hugo new command. When you run that command, it adds few configuration properties to the post like date and title. Archetype allows you to define your own configuration properties that will be added to the post front matter whenever hugo new command is used.</p></li>
+
+<li><p>config.toml: Every website should have a configuration file at the root. By default, the configuration file uses TOML format but you can also use YAML or JSON formats as well. TOML is minimal configuration file format that’s easy to read due to obvious semantics. The configuration settings mentioned in the config.toml are applied to the full site. These configuration settings include baseURL and title of the website.</p></li>
+
+<li><p>content: This is where you will store content of the website. Inside content, you will create sub-directories for different sections. Let’s suppose your website has three actions – blog, article, and tutorial then you will have three different directories for each of them inside the content directory. The name of the section i.e. blog, article, or tutorial will be used by Hugo to apply a specific layout applicable to that section.</p></li>
+
+<li><p>data: This directory is used to store configuration files that can be used by Hugo when generating your website. You can write these files in YAML, JSON, or TOML format.</p></li>
+
+<li><p>layouts: The content inside this directory is used to specify how your content will be converted into the static website.</p></li>
+
+<li><p>static: This directory is used to store all the static content that your website will need like images, CSS, JavaScript or other static content.</p></li>
+</ul></li>
+
+<li><p>Now add some content&hellip; in my case I wanted to add a new post.</p>
+
+<pre><code>$ hugo new post/hugo-blog-tutorial.md
+</code></pre>
+
+<p>You&rsquo;ll see this file show up as <code>content/post/hugo-blog-tutorial.md</code></p></li>
+
+<li><p>Inside my brand new file, I find this lovely TOML configuration:</p>
+
+<pre><code>+++
+date = &quot;2016-12-19T21:37:31-06:00&quot;
+draft = true
+title = &quot;hugo blog tutorial&quot;
+
++++
+
+I added this as my first blog post's content.
+</code></pre>
+
+<p>It&rsquo;s pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown. Make sure you follow the proper syntax for true and false. I had a hard time figuring out what was wrong when I accidentally use the Pythonic <em>True</em>.</p></li>
+
+<li><p>You can download a <a href="https://themes.gohugo.io/">theme</a> and throw it into a directory called <code>themes</code>. I tried that and got confused once I started customizing, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.</p>
+
+<pre><code>$ hugo server --theme=hugo_theme_robust --buildDrafts
+</code></pre></li>
+
+<li><p>If you&rsquo;re still with me and decided against the theme, thanks for taking my advice! Setting up your site is pretty straight forward, everything goes in you <code>layouts</code> directory.</p>
+
+<ul>
+<li><p>First you&rsquo;ll probably want to set up your <code>partials</code> folder. I added a <code>header.html</code> and <code>footer.html</code>. You can guess the kind of content that would be included there.</p></li>
+
+<li><p>Second, in your <code>layouts</code> create an <code>index.html</code>, this can contain whatever you want, but you&rsquo;ll probably want to include both your partials.</p>
+
+<pre><code>{{ partial &quot;header.html&quot; . }}
+&lt;main&gt;
+    &lt;!-- some sort of content here --&gt;
+&lt;/main&gt;
+{{ partial &quot;footer.html&quot; . }}
+</code></pre></li>
+
+<li><p>Now you&rsquo;ll want to set up your <code>_default</code> folder.</p>
+
+<ul>
+<li><p>Let&rsquo;s start with <code>section.html</code> do something simple like:</p>
+
+<pre><code>    {{ partial &quot;header.html&quot; . }}
+    &lt;main&gt;
+        &lt;div&gt;
+            {{ range .Data.Pages }}
+                {{ .Render &quot;li&quot;}}
+            {{ end }}
+        &lt;/div&gt;
+    &lt;/main&gt;
+    {{ partial &quot;footer.html&quot; . }}
+</code></pre></li>
+
+<li><p>This will generate a page with a whole bunch of <em>li</em>. Those <em>li</em> are your posts (or any other content that you&rsquo;ve added to you <code>content</code> folder). In <code>_default</code> you&rsquo;ll want to add a <code>li.html</code> file.</p>
+
+<pre><code>&lt;div&gt;
+    &lt;div&gt;
+        &lt;h2&gt;&lt;a href=&quot;{{ .Permalink }}&quot;&gt;{{ .Title }}&lt;/a&gt;&lt;/h2&gt;
+        &lt;div&gt;
+            &lt;span&gt;{{ .Date.Format &quot;Mon, Jan 2, 2006&quot; }} {{ if .GetParam &quot;draft&quot;}}DRAFT{{end}}&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div&gt;
+            &lt;p&gt;{{ .Summary }} &lt;a href=&quot;{{ .Permalink }}&quot;&gt;Read full post &amp;#10132;&lt;/a&gt;&lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>The <code>.Title</code> and <code>.Date</code> are from the <em>post</em> markdown files. The <code>.Permalink</code> is the link to the post. Then we are checking to see if this post is a draft so we can spit that out as a visual indicator. The <code>.Summary</code> is &ldquo;A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting <!--more--> at the appropriate place in the content page&rdquo;. I find it useful being able to control the breakpoint!</p></li>
+
+<li><p>Finally you have <code>single.html</code>. This is how your post is going to be setup. For simplicity let&rsquo;s just have:</p>
+
+<pre><code>{{ partial &quot;header.html&quot; . }}
+&lt;section&gt;
+    &lt;h1 id=&quot;title&quot;&gt;{{ .Title }}&lt;/h1&gt;
+    &lt;aside id=&quot;meta&quot;&gt;
+        &lt;h4 id=&quot;date&quot;&gt; {{ .Date.Format &quot;Mon Jan 2, 2006&quot; }} &lt;/h4&gt;
+        &lt;section&gt;
+            &lt;h5 id=&quot;wc&quot;&gt; 
+                {{ if gt (div .WordCount 250.0) 1 }}
+                    {{ int (div .WordCount 250.0) }} Minutes
+                {{else}}
+                    1 Minute
+                {{ end }}
+                of reading time
+            &lt;/h5&gt;
+        &lt;/section&gt;
+    &lt;/aside&gt;
+    &lt;div class=&quot;padding-8&quot;&gt;
+        &lt;article id=&quot;content&quot;&gt;
+        {{ .Content }}
+        &lt;/article&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+{{ partial &quot;footer.html&quot; . }}            
+</code></pre>
+
+<p>Most of this you&rsquo;ve seen before except for a couple new variables. <code>.WordCount</code> as you may have guessed, is the number of words in your post. Likewise <code>.Content</code> is the content of the actually post.</p></li>
+</ul></li>
+</ul></li>
+
+<li><p>Now you are ready to start the Hugo server, with the <code>--buildDraft</code> option (or else you won&rsquo;t have any content).</p>
+
+<p><code>$ hugo server --buildDrafts</code></p>
+
+<p>You&rsquo;ll get some lovely output telling you what was create, the server address (<a href="http://localhost:1313/">http://localhost:1313/</a>) and that Hugo is watching for any changes.</p></li>
+
+<li><p>Check it out in your browser. Make some changes and see how fast Hugo rebuilds your site. When you&rsquo;re ready (and update some of your posts so that they are no longer in draft) just run <code>$ hugo</code> and Hugo will throw your built website in the <code>public</code> folder.</p></li>
+</ol>
+
+<h1 id="done">Done</h1>
+
+<p>Well the Hugo part is done. You can checkout <a href="https://github.com/randomscribes/random-scribes">GitHub</a> to see how I&rsquo;ve evolved the blog over time. I&rsquo;ve still got to setup up my Appengine instance and deploy the code and switch my old blog to a subdomain of my new one. That&rsquo;ll come in another post.</p>
+	        </article>
+		</div>
+	</div>
+</section>
+
+
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Steven's Random Scribes</div>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <p>My thought's on programming, data science, business analysis, and managing.</p>
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-40436937-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+</body>
+
+</html>

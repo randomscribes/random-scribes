@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>http://www.randomscribes.com/</loc>
+    <lastmod>2016-12-31T21:37:31-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.randomscribes.com/post/hugo-blog-tutorial/</loc>
+    <lastmod>2016-12-31T21:37:31-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.randomscribes.com/post/blog-restart/</loc>
+    <lastmod>2016-12-30T20:01:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.randomscribes.com/contact/</loc>
+    <lastmod>2016-12-01T20:01:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.randomscribes.com/about/</loc>
+    <lastmod>2016-12-01T12:28:57-06:00</lastmod>
+  </url>
+  
+</urlset>
