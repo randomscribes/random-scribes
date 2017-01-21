@@ -11,14 +11,13 @@ handlers:
     static_files: static/css/\1
     upload: static/(.*)
 
-  - url: /(.*)/?$
-    static_files: static/\1/index.html
-    upload: static/(.*)/index.html
-
-
   - url: /
     static_files: static/index.html
     upload: static/index.html
+
+  - url: /(.*?)/?$
+    static_files: static/\1/index.html
+    upload: static/(.*)/index.html
 
 skip_files:
   - ^(.*/)?app\.yaml
