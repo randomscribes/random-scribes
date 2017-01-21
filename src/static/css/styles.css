@@ -244,6 +244,13 @@ img.article-image {
   text-shadow: 1px 1px 2px #424242;
 }
 
+pre {
+  overflow: auto;
+  background: #EEEEEE;
+  padding: 5px;
+  border: 1px #424242 dashed;
+}
+
 footer.mdl-mini-footer {
   background-color: #f44336;
 }
