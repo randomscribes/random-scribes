@@ -6,16 +6,20 @@
     <description>Recent content in Post-rsses on Steven&#39;s Random Scribes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Jan 2017 20:54:20 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 31 Dec 2016 20:01:50 -0600</lastBuildDate>
     <atom:link href="http://www.randomscribes.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>my_new_hugo_blog</title>
-      <link>http://www.randomscribes.com/post/my_new_hugo_blog/</link>
-      <pubDate>Fri, 20 Jan 2017 20:54:20 -0600</pubDate>
+      <title>Blog Restart</title>
+      <link>http://www.randomscribes.com/post/blog-restart/</link>
+      <pubDate>Sat, 31 Dec 2016 20:01:50 -0600</pubDate>
       
-      <guid>http://www.randomscribes.com/post/my_new_hugo_blog/</guid>
-      <description></description>
+      <guid>http://www.randomscribes.com/post/blog-restart/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m restarting my blog! It&amp;rsquo;s been a long time since I&amp;rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&amp;rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m resetting. New look, new platform (Hugo), and new thoughts. I&amp;rsquo;m going to be writing more often about more topics. Some of the blog posts are going to be shorter, like this one. I&amp;rsquo;m going to be blogging about new topics like managing, data science &amp;amp; analysis, in addition to programming and any other thoughts that I have.&lt;/p&gt;
+
+&lt;p&gt;I hope you enjoy.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -24,23 +28,23 @@
       <pubDate>Mon, 19 Dec 2016 21:37:31 -0600</pubDate>
       
       <guid>http://www.randomscribes.com/post/hugo-blog-tutorial/</guid>
-      <description>&lt;p&gt;So I&amp;rsquo;ve started this new blog. Something a little easier to update than my &lt;a href=&#34;http://old.randomscribes.com&#34;&gt;old blog&lt;/a&gt;. It&amp;rsquo;s using a number of great technologies, Git (of course), Hugo, and Google&amp;rsquo;s Appengine. This post is all about my experience with Hugo.&lt;/p&gt;
+      <description>&lt;p&gt;So I&amp;rsquo;ve started this new blog. Something a little easier to update than my &lt;a href=&#34;http://old.randomscribes.com&#34;&gt;old blog&lt;/a&gt;. I&amp;rsquo;m using a number of great technologies, Git (of course), Hugo, and Google&amp;rsquo;s Appengine. This post is all about my experience with Hugo.&lt;/p&gt;
 
 &lt;h1 id=&#34;why-hugo&#34;&gt;Why Hugo?&lt;/h1&gt;
 
-&lt;p&gt;Hugo is a static site generator. It&amp;rsquo;s built on top of Go, pretty simple, and super fast. You write your content in markdown and after a quick save the built in server will automatically builds your static files on the fly. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you&amp;rsquo;ll be fine. You can use one of the existing &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;themes&lt;/a&gt;, build your own&amp;hellip; or if you are like me go without one (although I think they recommend always using themes).&lt;/p&gt;
+&lt;p&gt;Hugo is a static site generator. It&amp;rsquo;s built on top of Go, very simple, and super fast. You write your content in markdown and after saving the Hugo server will automatically build your static files on the fly for easy testing on your local host. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you&amp;rsquo;ll be fine. You can use one of the existing &lt;a href=&#34;http://themes.gohugo.io/&#34;&gt;themes&lt;/a&gt;, build your own, or if you are like me go without one (although I think they recommend always using a theme).&lt;/p&gt;
 
 &lt;h1 id=&#34;how-d-i-do-it&#34;&gt;How&amp;rsquo;d I do it?&lt;/h1&gt;
 
 &lt;p&gt;There is a &lt;a href=&#34;http://gohugo.io/overview/quickstart/&#34;&gt;quick start guide&lt;/a&gt; that I used from Hugo, my instructions diverge a little bit from it.&lt;/p&gt;
 
 &lt;ol&gt;
-&lt;li&gt;&lt;p&gt;Install &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; or&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Install from &lt;a href=&#34;http://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; or&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ brew update &amp;amp;&amp;amp; brew install hugo 
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;Create your new site&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;Create your new site.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ hugo new site random-scribes
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
@@ -93,14 +97,14 @@ title = &amp;quot;hugo blog tutorial&amp;quot;
 I added this as my first blog post&#39;s content.
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;It&amp;rsquo;s pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown.&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;It&amp;rsquo;s pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown. Make sure you follow the proper syntax for true and false. I had a hard time figuring out what was wrong when I accidentally use the Pythonic &lt;em&gt;True&lt;/em&gt;.&lt;/p&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;You can go download a &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;theme&lt;/a&gt; and throw it into a directory called &lt;code&gt;themes&lt;/code&gt;. I tried that and got confused, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;You can download a &lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;theme&lt;/a&gt; and throw it into a directory called &lt;code&gt;themes&lt;/code&gt;. I tried that and got confused once I started customizing, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ hugo server --theme=hugo_theme_robust --buildDrafts
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 
-&lt;li&gt;&lt;p&gt;If you&amp;rsquo;re still with me and decided against the theme thanks! Setting up your site is pretty straight forward, everything goes in you &lt;code&gt;layouts&lt;/code&gt; directory.&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;If you&amp;rsquo;re still with me and decided against the theme, thanks for taking my advice! Setting up your site is pretty straight forward, everything goes in you &lt;code&gt;layouts&lt;/code&gt; directory.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;p&gt;First you&amp;rsquo;ll probably want to set up your &lt;code&gt;partials&lt;/code&gt; folder. I added a &lt;code&gt;header.html&lt;/code&gt; and &lt;code&gt;footer.html&lt;/code&gt;. You can guess the kind of content that would be included there.&lt;/p&gt;&lt;/li&gt;
@@ -145,7 +149,7 @@ I added this as my first blog post&#39;s content.
 &amp;lt;/div&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Title&amp;rsquo;s is the &lt;code&gt;.Title&lt;/code&gt; and &lt;code&gt;.Date&lt;/code&gt; are from the post markdown files. The &lt;code&gt;.Permalink&lt;/code&gt; is the link to the post and some what obviously we are checking to see if this post is a draft so we can spit that out as a visual indicator. The &lt;code&gt;.Summary&lt;/code&gt; is &amp;ldquo;A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting  at the appropriate place in the content page&amp;rdquo;. I love being able to control the breakpoint!&lt;/p&gt;&lt;/li&gt;
+&lt;p&gt;The &lt;code&gt;.Title&lt;/code&gt; and &lt;code&gt;.Date&lt;/code&gt; are from the &lt;em&gt;post&lt;/em&gt; markdown files. The &lt;code&gt;.Permalink&lt;/code&gt; is the link to the post. Then we are checking to see if this post is a draft so we can spit that out as a visual indicator. The &lt;code&gt;.Summary&lt;/code&gt; is &amp;ldquo;A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting &lt;!--more--&gt; at the appropriate place in the content page&amp;rdquo;. I find it useful being able to control the breakpoint!&lt;/p&gt;&lt;/li&gt;
 
 &lt;li&gt;&lt;p&gt;Finally you have &lt;code&gt;single.html&lt;/code&gt;. This is how your post is going to be setup. For simplicity let&amp;rsquo;s just have:&lt;/p&gt;
 
@@ -190,28 +194,6 @@ I added this as my first blog post&#39;s content.
 &lt;h1 id=&#34;done&#34;&gt;Done&lt;/h1&gt;
 
 &lt;p&gt;Well the Hugo part is done. You can checkout &lt;a href=&#34;https://github.com/randomscribes/random-scribes&#34;&gt;GitHub&lt;/a&gt; to see how I&amp;rsquo;ve evolved the blog over time. I&amp;rsquo;ve still got to setup up my Appengine instance and deploy the code and switch my old blog to a subdomain of my new one. That&amp;rsquo;ll come in another post.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Blog Restart</title>
-      <link>http://www.randomscribes.com/post/blog-restart/</link>
-      <pubDate>Thu, 01 Dec 2016 20:01:50 -0600</pubDate>
-      
-      <guid>http://www.randomscribes.com/post/blog-restart/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m restarting my blog! It&amp;rsquo;s been a long time since I&amp;rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&amp;rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&amp;rsquo;t.&lt;/p&gt;
-
-&lt;p&gt;So I&amp;rsquo;m resetting. New look, new platform (Hugo), and new thoughts. I&amp;rsquo;m going to be writing more often about more topics. Some of the blog posts are going to be shorter, like this one. I&amp;rsquo;m going to be blogging about new topics like managing, data science &amp;amp; analysis, in addition to programming and any other thoughts that I have.&lt;/p&gt;
-
-&lt;p&gt;I hope you enjoy.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Do&#39;s and Don&#39;ts to a Tech Blog</title>
-      <link>http://www.randomscribes.com/post/dos-and-donts-to-a-tech-blog/</link>
-      <pubDate>Thu, 01 Dec 2016 20:01:50 -0600</pubDate>
-      
-      <guid>http://www.randomscribes.com/post/dos-and-donts-to-a-tech-blog/</guid>
-      <description></description>
     </item>
     
   </channel>

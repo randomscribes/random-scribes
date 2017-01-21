@@ -55,7 +55,7 @@
 			    <section>
 					<h5 id="wc"> 
 						
-						    4 Minutes
+						    5 Minutes
 						
 						 of reading time
 					</h5>
@@ -72,23 +72,23 @@
 		
 		<div class="padding-8">
 	        <article id="content">
-	           <p>So I&rsquo;ve started this new blog. Something a little easier to update than my <a href="http://old.randomscribes.com">old blog</a>. It&rsquo;s using a number of great technologies, Git (of course), Hugo, and Google&rsquo;s Appengine. This post is all about my experience with Hugo.</p>
+	           <p>So I&rsquo;ve started this new blog. Something a little easier to update than my <a href="http://old.randomscribes.com">old blog</a>. I&rsquo;m using a number of great technologies, Git (of course), Hugo, and Google&rsquo;s Appengine. This post is all about my experience with Hugo.</p>
 
 <h1 id="why-hugo">Why Hugo?</h1>
 
-<p>Hugo is a static site generator. It&rsquo;s built on top of Go, pretty simple, and super fast. You write your content in markdown and after a quick save the built in server will automatically builds your static files on the fly. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you&rsquo;ll be fine. You can use one of the existing <a href="http://themes.gohugo.io/">themes</a>, build your own&hellip; or if you are like me go without one (although I think they recommend always using themes).</p>
+<p>Hugo is a static site generator. It&rsquo;s built on top of Go, very simple, and super fast. You write your content in markdown and after saving the Hugo server will automatically build your static files on the fly for easy testing on your local host. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you&rsquo;ll be fine. You can use one of the existing <a href="http://themes.gohugo.io/">themes</a>, build your own, or if you are like me go without one (although I think they recommend always using a theme).</p>
 
 <h1 id="how-d-i-do-it">How&rsquo;d I do it?</h1>
 
 <p>There is a <a href="http://gohugo.io/overview/quickstart/">quick start guide</a> that I used from Hugo, my instructions diverge a little bit from it.</p>
 
 <ol>
-<li><p>Install <a href="http://gohugo.io/">Hugo</a> or</p>
+<li><p>Install from <a href="http://gohugo.io/">Hugo</a> or</p>
 
 <pre><code>$ brew update &amp;&amp; brew install hugo 
 </code></pre></li>
 
-<li><p>Create your new site</p>
+<li><p>Create your new site.</p>
 
 <pre><code>$ hugo new site random-scribes
 </code></pre></li>
@@ -141,14 +141,14 @@ title = &quot;hugo blog tutorial&quot;
 I added this as my first blog post's content.
 </code></pre>
 
-<p>It&rsquo;s pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown.</p></li>
+<p>It&rsquo;s pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown. Make sure you follow the proper syntax for true and false. I had a hard time figuring out what was wrong when I accidentally use the Pythonic <em>True</em>.</p></li>
 
-<li><p>You can go download a <a href="https://themes.gohugo.io/">theme</a> and throw it into a directory called <code>themes</code>. I tried that and got confused, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.</p>
+<li><p>You can download a <a href="https://themes.gohugo.io/">theme</a> and throw it into a directory called <code>themes</code>. I tried that and got confused once I started customizing, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.</p>
 
 <pre><code>$ hugo server --theme=hugo_theme_robust --buildDrafts
 </code></pre></li>
 
-<li><p>If you&rsquo;re still with me and decided against the theme thanks! Setting up your site is pretty straight forward, everything goes in you <code>layouts</code> directory.</p>
+<li><p>If you&rsquo;re still with me and decided against the theme, thanks for taking my advice! Setting up your site is pretty straight forward, everything goes in you <code>layouts</code> directory.</p>
 
 <ul>
 <li><p>First you&rsquo;ll probably want to set up your <code>partials</code> folder. I added a <code>header.html</code> and <code>footer.html</code>. You can guess the kind of content that would be included there.</p></li>
@@ -193,7 +193,7 @@ I added this as my first blog post's content.
 &lt;/div&gt;
 </code></pre>
 
-<p>Title&rsquo;s is the <code>.Title</code> and <code>.Date</code> are from the post markdown files. The <code>.Permalink</code> is the link to the post and some what obviously we are checking to see if this post is a draft so we can spit that out as a visual indicator. The <code>.Summary</code> is &ldquo;A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting  at the appropriate place in the content page&rdquo;. I love being able to control the breakpoint!</p></li>
+<p>The <code>.Title</code> and <code>.Date</code> are from the <em>post</em> markdown files. The <code>.Permalink</code> is the link to the post. Then we are checking to see if this post is a draft so we can spit that out as a visual indicator. The <code>.Summary</code> is &ldquo;A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting <!--more--> at the appropriate place in the content page&rdquo;. I find it useful being able to control the breakpoint!</p></li>
 
 <li><p>Finally you have <code>single.html</code>. This is how your post is going to be setup. For simplicity let&rsquo;s just have:</p>
 

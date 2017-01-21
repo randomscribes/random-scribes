@@ -6,21 +6,21 @@ draft = false
 
 +++
 
-So I've started this new blog. Something a little easier to update than my [old blog](http://old.randomscribes.com). It's using a number of great technologies, Git (of course), Hugo, and Google's Appengine. This post is all about my experience with Hugo.
+So I've started this new blog. Something a little easier to update than my [old blog](http://old.randomscribes.com). I'm using a number of great technologies, Git (of course), Hugo, and Google's Appengine. This post is all about my experience with Hugo.<!--more-->
 
 # Why Hugo?
-Hugo is a static site generator. It's built on top of Go, pretty simple, and super fast. You write your content in markdown and after a quick save the built in server will automatically builds your static files on the fly. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you'll be fine. You can use one of the existing [themes](http://themes.gohugo.io/), build your own... or if you are like me go without one (although I think they recommend always using themes).
+Hugo is a static site generator. It's built on top of Go, very simple, and super fast. You write your content in markdown and after saving the Hugo server will automatically build your static files on the fly for easy testing on your local host. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you'll be fine. You can use one of the existing [themes](http://themes.gohugo.io/), build your own, or if you are like me go without one (although I think they recommend always using a theme).
 
 # How'd I do it?
 There is a [quick start guide](http://gohugo.io/overview/quickstart/) that I used from Hugo, my instructions diverge a little bit from it.
 
-1. Install [Hugo](http://gohugo.io/) or 
+1. Install from [Hugo](http://gohugo.io/) or 
 
     ``` 
     $ brew update && brew install hugo 
     ```
 
-1. Create your new site 
+1. Create your new site.
 
     ```
     $ hugo new site random-scribes
@@ -76,15 +76,15 @@ There is a [quick start guide](http://gohugo.io/overview/quickstart/) that I use
     I added this as my first blog post's content.
     ```
 
-    It's pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown.
+    It's pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown. Make sure you follow the proper syntax for true and false. I had a hard time figuring out what was wrong when I accidentally use the Pythonic _True_.
 
-1. You can go download a [theme](https://themes.gohugo.io/) and throw it into a directory called `themes`. I tried that and got confused, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.
+1. You can download a [theme](https://themes.gohugo.io/) and throw it into a directory called `themes`. I tried that and got confused once I started customizing, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.
 
     ```
     $ hugo server --theme=hugo_theme_robust --buildDrafts
     ```
 
-1. If you're still with me and decided against the theme thanks! Setting up your site is pretty straight forward, everything goes in you `layouts` directory.
+1. If you're still with me and decided against the theme, thanks for taking my advice! Setting up your site is pretty straight forward, everything goes in you `layouts` directory.
 
     * First you'll probably want to set up your `partials` folder. I added a `header.html` and `footer.html`. You can guess the kind of content that would be included there.
 
@@ -130,7 +130,7 @@ There is a [quick start guide](http://gohugo.io/overview/quickstart/) that I use
             </div>
             ```
 
-            Title's is the `.Title` and `.Date` are from the post markdown files. The `.Permalink` is the link to the post and some what obviously we are checking to see if this post is a draft so we can spit that out as a visual indicator. The `.Summary` is "A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting <!--more--> at the appropriate place in the content page". I love being able to control the breakpoint!
+            The `.Title` and `.Date` are from the _post_ markdown files. The `.Permalink` is the link to the post. Then we are checking to see if this post is a draft so we can spit that out as a visual indicator. The `.Summary` is "A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting <!--more--> at the appropriate place in the content page". I find it useful being able to control the breakpoint!
         * Finally you have `single.html`. This is how your post is going to be setup. For simplicity let's just have:
 
             ```

@@ -53,12 +53,12 @@
     	</div>
 
     <div class="mdl-cell mdl-cell--8-col">
-        <h2 class="mdl-card__title-text"><a href="http://www.randomscribes.com/post/my_new_hugo_blog/">my_new_hugo_blog</a></h2>
+        <h2 class="mdl-card__title-text"><a href="http://www.randomscribes.com/post/blog-restart/">Blog Restart</a></h2>
         <div class="mdl-card__supporting-text padding-top">
-            <span>Fri, Jan 20, 2017 </span>
+            <span>Sat, Dec 31, 2016 </span>
         </div>
         <div class="mdl-card__supporting-text no-left-padding">
-            <p> <a href="http://www.randomscribes.com/post/my_new_hugo_blog/">Read full post &#10132;</a></p>
+            <p><p>I&rsquo;m restarting my blog! It&rsquo;s been a long time since I&rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&rsquo;t.</p> <a href="http://www.randomscribes.com/post/blog-restart/">Read full post &#10132;</a></p>
             <span>Category: <a href="#">Latest</a></span>
         </div>
     </div>
@@ -75,162 +75,7 @@
             <span>Mon, Dec 19, 2016 </span>
         </div>
         <div class="mdl-card__supporting-text no-left-padding">
-            <p><p>So I&rsquo;ve started this new blog. Something a little easier to update than my <a href="http://old.randomscribes.com">old blog</a>. It&rsquo;s using a number of great technologies, Git (of course), Hugo, and Google&rsquo;s Appengine. This post is all about my experience with Hugo.</p>
-
-<h1 id="why-hugo">Why Hugo?</h1>
-
-<p>Hugo is a static site generator. It&rsquo;s built on top of Go, pretty simple, and super fast. You write your content in markdown and after a quick save the built in server will automatically builds your static files on the fly. The site configuration can be written in JSON, YAML or TOML. The directory structure, which is used by Hugo to know which content to serve where, can get a little complicated, but as long as you stick to the documentation you&rsquo;ll be fine. You can use one of the existing <a href="http://themes.gohugo.io/">themes</a>, build your own&hellip; or if you are like me go without one (although I think they recommend always using themes).</p>
-
-<h1 id="how-d-i-do-it">How&rsquo;d I do it?</h1>
-
-<p>There is a <a href="http://gohugo.io/overview/quickstart/">quick start guide</a> that I used from Hugo, my instructions diverge a little bit from it.</p>
-
-<ol>
-<li><p>Install <a href="http://gohugo.io/">Hugo</a> or</p>
-
-<pre><code>$ brew update &amp;&amp; brew install hugo 
-</code></pre></li>
-
-<li><p>Create your new site</p>
-
-<pre><code>$ hugo new site random-scribes
-</code></pre></li>
-
-<li><p>You&rsquo;ll have a folder structure that looks something like this:</p>
-
-<pre><code>.
-|-- archetypes
-|-- config.toml
-|-- content
-|-- data
-|-- layouts
-`-- static
-
-5 directories, 1 file
-</code></pre>
-
-<p>Straight from the Hugo <a href="http://gohugo.io/overview/quickstart/">quick start guide</a></p>
-
-<ul>
-<li><p>archetypes: You can create new content files in Hugo using the hugo new command. When you run that command, it adds few configuration properties to the post like date and title. Archetype allows you to define your own configuration properties that will be added to the post front matter whenever hugo new command is used.</p></li>
-
-<li><p>config.toml: Every website should have a configuration file at the root. By default, the configuration file uses TOML format but you can also use YAML or JSON formats as well. TOML is minimal configuration file format that’s easy to read due to obvious semantics. The configuration settings mentioned in the config.toml are applied to the full site. These configuration settings include baseURL and title of the website.</p></li>
-
-<li><p>content: This is where you will store content of the website. Inside content, you will create sub-directories for different sections. Let’s suppose your website has three actions – blog, article, and tutorial then you will have three different directories for each of them inside the content directory. The name of the section i.e. blog, article, or tutorial will be used by Hugo to apply a specific layout applicable to that section.</p></li>
-
-<li><p>data: This directory is used to store configuration files that can be used by Hugo when generating your website. You can write these files in YAML, JSON, or TOML format.</p></li>
-
-<li><p>layouts: The content inside this directory is used to specify how your content will be converted into the static website.</p></li>
-
-<li><p>static: This directory is used to store all the static content that your website will need like images, CSS, JavaScript or other static content.</p></li>
-</ul></li>
-
-<li><p>Now add some content&hellip; in my case I wanted to add a new post.</p>
-
-<pre><code>$ hugo new post/hugo-blog-tutorial.md
-</code></pre>
-
-<p>You&rsquo;ll see this file show up as <code>content/post/hugo-blog-tutorial.md</code></p></li>
-
-<li><p>Inside my brand new file, I find this lovely TOML configuration:</p>
-
-<pre><code>+++
-date = &quot;2016-12-19T21:37:31-06:00&quot;
-draft = true
-title = &quot;hugo blog tutorial&quot;
-
-+++
-
-I added this as my first blog post's content.
-</code></pre>
-
-<p>It&rsquo;s pretty straight forward, date the file was created, draft status (true/false), and title. Everything after the TOML configuration is the content for file written in markdown.</p></li>
-
-<li><p>You can go download a <a href="https://themes.gohugo.io/">theme</a> and throw it into a directory called <code>themes</code>. I tried that and got confused, going without a theme seemed more straight forward to me. However, if you are unsure of what you want your site to look like, and you were hoping to try a couple different themes, by all means install one and start the hugo server with the specified theme.</p>
-
-<pre><code>$ hugo server --theme=hugo_theme_robust --buildDrafts
-</code></pre></li>
-
-<li><p>If you&rsquo;re still with me and decided against the theme thanks! Setting up your site is pretty straight forward, everything goes in you <code>layouts</code> directory.</p>
-
-<ul>
-<li><p>First you&rsquo;ll probably want to set up your <code>partials</code> folder. I added a <code>header.html</code> and <code>footer.html</code>. You can guess the kind of content that would be included there.</p></li>
-
-<li><p>Second, in your <code>layouts</code> create an <code>index.html</code>, this can contain whatever you want, but you&rsquo;ll probably want to include both your partials.</p>
-
-<pre><code>{{ partial &quot;header.html&quot; . }}
-&lt;main&gt;
-    &lt;!-- some sort of content here --&gt;
-&lt;/main&gt;
-{{ partial &quot;footer.html&quot; . }}
-</code></pre></li>
-
-<li><p>Now you&rsquo;ll want to set up your <code>_default</code> folder.</p>
-
-<ul>
-<li><p>Let&rsquo;s start with <code>section.html</code> do something simple like:</p>
-
-<pre><code>    {{ partial &quot;header.html&quot; . }}
-    &lt;main&gt;
-        &lt;div&gt;
-            {{ range .Data.Pages }}
-                {{ .Render &quot;li&quot;}}
-            {{ end }}
-        &lt;/div&gt;
-    &lt;/main&gt;
-    {{ partial &quot;footer.html&quot; . }}
-</code></pre></li>
-
-<li><p>This will generate a page with a whole bunch of <em>li</em>. Those <em>li</em> are your posts (or any other content that you&rsquo;ve added to you <code>content</code> folder). In <code>_default</code> you&rsquo;ll want to add a <code>li.html</code> file.</p>
-
-<pre><code>&lt;div&gt;
-    &lt;div&gt;
-        &lt;h2&gt;&lt;a href=&quot;{{ .Permalink }}&quot;&gt;{{ .Title }}&lt;/a&gt;&lt;/h2&gt;
-        &lt;div&gt;
-            &lt;span&gt;{{ .Date.Format &quot;Mon, Jan 2, 2006&quot; }} {{ if .GetParam &quot;draft&quot;}}DRAFT{{end}}&lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div&gt;
-            &lt;p&gt;{{ .Summary }} &lt;a href=&quot;{{ .Permalink }}&quot;&gt;Read full post &amp;#10132;&lt;/a&gt;&lt;/p&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-
-<p>Title&rsquo;s is the <code>.Title</code> and <code>.Date</code> are from the post markdown files. The <code>.Permalink</code> is the link to the post and some what obviously we are checking to see if this post is a draft so we can spit that out as a visual indicator. The <code>.Summary</code> is &ldquo;A generated summary of the content for easily showing a snippet in a summary view. Note that the breakpoint can be set manually by inserting  at the appropriate place in the content page&rdquo;. I love being able to control the breakpoint!</p> <a href="http://www.randomscribes.com/post/hugo-blog-tutorial/">Read full post &#10132;</a></p>
-            <span>Category: <a href="#">Latest</a></span>
-        </div>
-    </div>
-</div>
-        
-            <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
-    	<div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
-    		<div class="randomscribes-post-image-background" style="background-image: url(/images/skeleton-fisher.jpg)"></div>
-    	</div>
-
-    <div class="mdl-cell mdl-cell--8-col">
-        <h2 class="mdl-card__title-text"><a href="http://www.randomscribes.com/post/blog-restart/">Blog Restart</a></h2>
-        <div class="mdl-card__supporting-text padding-top">
-            <span>Thu, Dec 1, 2016 </span>
-        </div>
-        <div class="mdl-card__supporting-text no-left-padding">
-            <p><p>I&rsquo;m restarting my blog! It&rsquo;s been a long time since I&rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&rsquo;t.</p> <a href="http://www.randomscribes.com/post/blog-restart/">Read full post &#10132;</a></p>
-            <span>Category: <a href="#">Latest</a></span>
-        </div>
-    </div>
-</div>
-        
-            <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
-    	<div class="mdl-card__media mdl-cell mdl-cell--12-col-tablet">
-    		<div class="randomscribes-post-image-background" style="background-image: url(/images/skeleton-fisher.jpg)"></div>
-    	</div>
-
-    <div class="mdl-cell mdl-cell--8-col">
-        <h2 class="mdl-card__title-text"><a href="http://www.randomscribes.com/post/dos-and-donts-to-a-tech-blog/">Do&#39;s and Don&#39;ts to a Tech Blog</a></h2>
-        <div class="mdl-card__supporting-text padding-top">
-            <span>Thu, Dec 1, 2016 </span>
-        </div>
-        <div class="mdl-card__supporting-text no-left-padding">
-            <p> <a href="http://www.randomscribes.com/post/dos-and-donts-to-a-tech-blog/">Read full post &#10132;</a></p>
+            <p><p>So I&rsquo;ve started this new blog. Something a little easier to update than my <a href="http://old.randomscribes.com">old blog</a>. I&rsquo;m using a number of great technologies, Git (of course), Hugo, and Google&rsquo;s Appengine. This post is all about my experience with Hugo.</p> <a href="http://www.randomscribes.com/post/hugo-blog-tutorial/">Read full post &#10132;</a></p>
             <span>Category: <a href="#">Latest</a></span>
         </div>
     </div>

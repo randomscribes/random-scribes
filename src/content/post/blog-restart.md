@@ -1,5 +1,5 @@
 +++
-date = "2016-12-01T20:01:50-06:00"
+date = "2016-12-31T20:01:50-06:00"
 title = "Blog Restart"
 draft = false
 image = "skeleton-fisher.jpg"
