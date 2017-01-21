@@ -6,26 +6,13 @@
     <description>Recent content in Post-rsses on Steven&#39;s Random Scribes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2016 20:01:50 -0600</lastBuildDate>
+    <lastBuildDate>Sat, 31 Dec 2016 21:37:31 -0600</lastBuildDate>
     <atom:link href="http://www.randomscribes.com/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>Blog Restart</title>
-      <link>http://www.randomscribes.com/post/blog-restart/</link>
-      <pubDate>Sat, 31 Dec 2016 20:01:50 -0600</pubDate>
-      
-      <guid>http://www.randomscribes.com/post/blog-restart/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m restarting my blog! It&amp;rsquo;s been a long time since I&amp;rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&amp;rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&amp;rsquo;t.&lt;/p&gt;
-
-&lt;p&gt;So I&amp;rsquo;m resetting. New look, new platform (Hugo), and new thoughts. I&amp;rsquo;m going to be writing more often about more topics. Some of the blog posts are going to be shorter, like this one. I&amp;rsquo;m going to be blogging about new topics like managing, data science &amp;amp; analysis, in addition to programming and any other thoughts that I have.&lt;/p&gt;
-
-&lt;p&gt;I hope you enjoy.&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Hugo Blog Tutorial</title>
       <link>http://www.randomscribes.com/post/hugo-blog-tutorial/</link>
-      <pubDate>Mon, 19 Dec 2016 21:37:31 -0600</pubDate>
+      <pubDate>Sat, 31 Dec 2016 21:37:31 -0600</pubDate>
       
       <guid>http://www.randomscribes.com/post/hugo-blog-tutorial/</guid>
       <description>&lt;p&gt;So I&amp;rsquo;ve started this new blog. Something a little easier to update than my &lt;a href=&#34;http://old.randomscribes.com&#34;&gt;old blog&lt;/a&gt;. I&amp;rsquo;m using a number of great technologies, Git (of course), Hugo, and Google&amp;rsquo;s Appengine. This post is all about my experience with Hugo.&lt;/p&gt;
@@ -194,6 +181,19 @@ I added this as my first blog post&#39;s content.
 &lt;h1 id=&#34;done&#34;&gt;Done&lt;/h1&gt;
 
 &lt;p&gt;Well the Hugo part is done. You can checkout &lt;a href=&#34;https://github.com/randomscribes/random-scribes&#34;&gt;GitHub&lt;/a&gt; to see how I&amp;rsquo;ve evolved the blog over time. I&amp;rsquo;ve still got to setup up my Appengine instance and deploy the code and switch my old blog to a subdomain of my new one. That&amp;rsquo;ll come in another post.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Blog Restart</title>
+      <link>http://www.randomscribes.com/post/blog-restart/</link>
+      <pubDate>Fri, 30 Dec 2016 20:01:50 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/post/blog-restart/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;m restarting my blog! It&amp;rsquo;s been a long time since I&amp;rsquo;ve last written a post. I was full of excuse. Life has been busy, I have a 18 month old son. Work has been busy, isn&amp;rsquo;t for everyone? My old blogging platform, custom built Django setup, was horrible to write in. I could have made it all work if I made it a priority but I didn&amp;rsquo;t.&lt;/p&gt;
+
+&lt;p&gt;So I&amp;rsquo;m resetting. New look, new platform (Hugo), and new thoughts. I&amp;rsquo;m going to be writing more often about more topics. Some of the blog posts are going to be shorter, like this one. I&amp;rsquo;m going to be blogging about new topics like managing, data science &amp;amp; analysis, in addition to programming and any other thoughts that I have.&lt;/p&gt;
+
+&lt;p&gt;I hope you enjoy.&lt;/p&gt;</description>
     </item>
     
   </channel>

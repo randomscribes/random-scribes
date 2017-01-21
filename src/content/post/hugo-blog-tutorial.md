@@ -1,6 +1,6 @@
 +++
 image = "hugo.png"
-date = "2016-12-19T21:37:31-06:00"
+date = "2016-12-31T21:37:31-06:00"
 title = "Hugo Blog Tutorial"
 draft = false
 
