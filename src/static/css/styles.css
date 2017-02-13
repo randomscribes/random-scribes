@@ -241,7 +241,7 @@ img.article-image {
 .mdl-card__media h1, .mdl-card__media h2, .mdl-card__media h3, .mdl-card__media h4, .mdl-card__media h5{
   color: #fff;
   margin: 0;
-  text-shadow: 1px 1px 2px #424242;
+  text-shadow: 1px 1px 8px #212121;
 }
 
 pre {

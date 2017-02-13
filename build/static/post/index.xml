@@ -6,8 +6,63 @@
     <description>Recent content in Post-rsses on Steven&#39;s Random Scribes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 31 Dec 2016 21:37:31 -0600</lastBuildDate>
+    <lastBuildDate>Sun, 19 Feb 2017 21:39:22 -0600</lastBuildDate>
     <atom:link href="http://www.randomscribes.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Elasticsearch - The Definitive Guide - A book review!</title>
+      <link>http://www.randomscribes.com/post/elasticsearch-book-review/</link>
+      <pubDate>Sun, 19 Feb 2017 21:39:22 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/post/elasticsearch-book-review/</guid>
+      <description>
+
+&lt;p&gt;Elasticsearch - The Definitive Guide is one of the best documentation textbooks that I have ever read.
+I finished the book during my last family holiday. I took advantage of sitting in airports, airplane rides, and nap times to slowly work away at the book. I won&amp;rsquo;t go into any sort of explanation of what ES is, the &lt;a href=&#34;https://www.elastic.co/products/elasticsearch&#34;&gt;Elasticsearch homepage&lt;/a&gt; and &lt;a href=&#34;https://en.wikipedia.org/wiki/Elasticsearch&#34;&gt;Wiki article&lt;/a&gt; can do a much better job of explaining what it is useful for than I. The company that I work for has an extensive implantation of Elasticsearch for what it does best&amp;hellip; text based search. It&amp;rsquo;s very fast and it&amp;rsquo;s simple to work with. We also use it for its fast aggregations. We calculate averages and sums over 100,000s of thousands of documents every second. Elasticsearch works well for both of these use cases. I&amp;rsquo;m not a developer. I do some &lt;em&gt;development&lt;/em&gt; when building tools to make my job and those on my team jobs easier. I&amp;rsquo;ve built a tool that stores all of our important performance indicators and queries that leverages Elasticsearch&amp;rsquo;s full text search. However the main reason why I wanted to learn more about ES is to use it for business intelligence and utilizing its aggregations.&lt;/p&gt;
+
+&lt;h1 id=&#34;it-is-a-great-read&#34;&gt;It is a Great Read&lt;/h1&gt;
+
+&lt;p&gt;The ES guide was developed with those who are brand new to Elasticsearch in mind. Sure you may not have to read a couple of the topics right off the bat (like some of the advanced fine tuning and querying), but the beauty of this book is that those sections are easy to skip if it&amp;rsquo;s not useful. And if you don&amp;rsquo;t want to skip those sections, you don&amp;rsquo;t have to because they are written in a way, that even a beginner can gain a general understanding of the principles.&lt;/p&gt;
+
+&lt;p&gt;I read this book cover to cover. I&amp;rsquo;ve also used it for reference when running into problems or looking for clarification while using ES. The book uses real examples that if you install their setup, you can run right on your computer.&lt;/p&gt;
+
+&lt;p&gt;I love that Elasticsearch - The Definitive Guide is THE definitive guide to Elasticsearch. Do a Google search about something ES related. One of the top results will be from the online version of this book. Even the other results that aren&amp;rsquo;t from &lt;em&gt;elastic.co&lt;/em&gt; are going to reference it (especially if it&amp;rsquo;s an Stack Exchange questions &amp;amp; answer). I find it incredible useful to know that I&amp;rsquo;m not wasting my time reading something that isn&amp;rsquo;t the authoritative voice on a topic. The online version is always up-to-date.&lt;/p&gt;
+
+&lt;p&gt;I read the online version of the text, it&amp;rsquo;s free, it&amp;rsquo;s always current, and was easy to read on my phone/tablet. The ES guide is developed in the open and anyone can &lt;a href=&#34;https://github.com/elastic/elasticsearch-definitive-guide&#34;&gt;contribute&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;highly-recommended&#34;&gt;Highly Recommended&lt;/h1&gt;
+
+&lt;p&gt;I recommend that anyone using Elasticsearch should read this book. Even if you don&amp;rsquo;t use Elasticsearch in production, it&amp;rsquo;s useful to know what you are missing out on. After you are done reading it, store it away in your memory and refer to it when you need it (it&amp;rsquo;s just a couple clicks away).&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>What Do I Do if Someone Disagrees With my Methodology?</title>
+      <link>http://www.randomscribes.com/post/what-do-I-do-if-someone-disagrees-with-my-methodology/</link>
+      <pubDate>Sat, 21 Jan 2017 13:38:21 -0600</pubDate>
+      
+      <guid>http://www.randomscribes.com/post/what-do-I-do-if-someone-disagrees-with-my-methodology/</guid>
+      <description>
+
+&lt;p&gt;At work I&amp;rsquo;m rarely confronted about my methodology while performing an analysis. Sure there are some clarifying questions, sometimes some suggestions on something else to try. I&amp;rsquo;m never told that my methodology is wrong&amp;hellip; until this week. It caught me off guard. We agreed to disagree rather quickly as we were both busy. It did made me think. What should I do when someone disagrees with my methodology?&lt;/p&gt;
+
+&lt;h4 id=&#34;are-you-both-asking-the-same-question&#34;&gt;Are you both asking the same question?&lt;/h4&gt;
+
+&lt;p&gt;Figure out if you are both to asking the same question. Data analysis is specific to the question you are answering. There&amp;rsquo;s a difference between &amp;ldquo;what&amp;rsquo;s the average car salesmen&amp;rsquo;s close rate?&amp;rdquo; and &amp;ldquo;what&amp;rsquo;s the average dealership&amp;rsquo;s close rate?&amp;rdquo;.&lt;/p&gt;
+
+&lt;h4 id=&#34;have-you-both-explained-yourselves-thoroughly&#34;&gt;Have you both explained yourselves thoroughly?&lt;/h4&gt;
+
+&lt;p&gt;Maybe the methodology that you are using has been used in the past unbeknownst to you and failed miserably. Both of you need to thoroughly explain your reasoning.&lt;/p&gt;
+
+&lt;h4 id=&#34;does-using-a-different-methodology-change-the-conclusion&#34;&gt;Does using a different methodology change the conclusion?&lt;/h4&gt;
+
+&lt;p&gt;There&amp;rsquo;s no point in arguing if two meteorologist predict rain tomorrow even if they are using two different methods.&lt;/p&gt;
+
+&lt;h4 id=&#34;who-is-responsible-for-the-outcome&#34;&gt;Who is responsible for the outcome?&lt;/h4&gt;
+
+&lt;p&gt;Ultimately someone is responsible for acting (or not acting) on the conclusion. If you can&amp;rsquo;t come to an agreement the person who&amp;rsquo;s skin on the line has to win out. Their job will be the one that&amp;rsquo;s on the line.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Hugo Blog Tutorial</title>
